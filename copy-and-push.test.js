@@ -8,4 +8,12 @@ describe('returns a new array with all the items in the original array and a new
 
         expect(copy).toEqual([1, 2, 3, 4]);
     });
+
+    it('returns new altered array, original array is unchanged', () => {
+        const numbers = [1, 2, 3];
+
+        const copy = copyAndPush(numbers, 4);
+
+        expect(numbers).toEqual([1, 2, 3]);
+    });
 });
