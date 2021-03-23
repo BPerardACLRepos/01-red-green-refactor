@@ -1,9 +1,14 @@
 const fetch = require('node-fetch');
 
-const fetchQuotes = async () => ({
-    name: 'string',
-    text: 'string',
-    image: 'string',
-})
+const fetchQuotes = async () => {
+    const res = await fetch('http://futuramaapi.herokuapp.com/api/quotes/1');
+    const body = await res.json();
+
+    return {
+        name: body[0].character,
+        text: body[0].quote,
+        image: body[0].image,
+    }
+}
 
 module.exports = fetchQuotes;
