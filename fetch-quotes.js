@@ -1,5 +1,9 @@
-const fetch = ('node-fetch');
+const fetch = require('node-fetch');
 
-const fetchQuotes = async () => { }
+const fetchQuotes = async () => ({
+    name: 'string',
+    text: 'string',
+    image: 'string',
+})
 
 module.exports = fetchQuotes;
